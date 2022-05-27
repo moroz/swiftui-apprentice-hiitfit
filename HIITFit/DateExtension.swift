@@ -52,7 +52,7 @@ extension Date {
     ///   - parameters:
     ///     - day: The other date.
     func isSameDay(as day: Date) -> Bool {
-        return yearMonthDay == day.yearMonthDay
+        yearMonthDay == day.yearMonthDay
     }
 
     var dayName: String {

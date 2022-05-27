@@ -30,6 +30,7 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import AVKit
 import SwiftUI
 
 struct ExerciseView: View {
@@ -39,13 +40,22 @@ struct ExerciseView: View {
     let index: Int
 
     var body: some View {
-        VStack {
-            HeaderView(exerciseName: exerciseNames[index])
-            Text("Video player")
-            Text("Timer")
-            Text("Start/Done button")
-            Text("Rating")
-            Text("History button")
+        GeometryReader { geometry in
+            VStack {
+                HeaderView(exerciseName: exerciseNames[index])
+                    .padding(.bottom)
+                if let url = Bundle.main.url(forResource: videoNames[index], withExtension: "mp4") {
+                    VideoPlayer(player: AVPlayer(url: url))
+                        .frame(height: geometry.size.height * 0.45)
+                } else {
+                    Text("Could not find \(videoNames[index]).mp4")
+                        .foregroundColor(.red)
+                }
+                Text("Timer")
+                Text("Start/Done button")
+                Text("Rating")
+                Text("History button")
+            }
         }
     }
 }
