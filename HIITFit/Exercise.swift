@@ -1,4 +1,4 @@
-/// Copyright (c) 2021 Razeware LLC
+/// Copyright (c) 2022 Razeware LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -30,22 +30,29 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
+import Foundation
 
-struct ContentView: View {
-  var body: some View {
-    TabView {
-      WelcomeView()
-      ForEach(0..<Exercise.exercises.count) { index in
-        ExerciseView(index: index)
-      }
-    }
-    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+struct Exercise {
+  let exerciseName: String
+  let videoName: String
+
+  enum ExerciseEnum: String {
+    case squat = "Squat"
+    case stepUp = "Step Up"
+    case burpee = "Burpee"
+    case sunSalute = "Sun Salute"
+  }
+
+  var videoUrl: URL? {
+    Bundle.main.url(forResource: videoName, withExtension: "mp4")
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
+extension Exercise {
+  static let exercises = [
+    Exercise(exerciseName: ExerciseEnum.squat.rawValue, videoName: "squat"),
+    Exercise(exerciseName: ExerciseEnum.stepUp.rawValue, videoName: "stepUp"),
+    Exercise(exerciseName: ExerciseEnum.burpee.rawValue, videoName: "burpee"),
+    Exercise(exerciseName: ExerciseEnum.sunSalute.rawValue, videoName: "sun-salute"),
+  ]
 }
