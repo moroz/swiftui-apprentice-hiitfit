@@ -40,10 +40,12 @@ struct HistoryView: View {
   let exercises2 = ["Squat", "Step Up", "Burpee"]
 
   var body: some View {
-    ZStack {
+    ZStack(alignment: .topTrailing) {
       Button(action: {}) {
         Image(systemName: "xmark.circle")
       }
+      .font(.title)
+      .padding(.trailing)
       VStack {
         Text("History")
           .font(.title)
