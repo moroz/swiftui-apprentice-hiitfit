@@ -26,6 +26,7 @@
 		F9CACF4C284251BC00D6D71B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF4B284251BC00D6D71B /* Exercise.swift */; };
 		F9CACF4E284253A300D6D71B /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF4D284253A300D6D71B /* HistoryStore.swift */; };
 		F9CACF51284255D700D6D71B /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF50284255D700D6D71B /* HistoryStoreDevData.swift */; };
+		F9CACF542842581800D6D71B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9CACF562842581800D6D71B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F9CACF4B284251BC00D6D71B /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = HIITFit/Models/Exercise.swift; sourceTree = SOURCE_ROOT; };
 		F9CACF4D284253A300D6D71B /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryStore.swift; path = HIITFit/Models/HistoryStore.swift; sourceTree = SOURCE_ROOT; };
 		F9CACF50284255D700D6D71B /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
+		F9CACF552842581800D6D71B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CD30C93D25147A8C0049DB93 /* DateExtension.swift */,
 				CD30C93E25147A8C0049DB93 /* ImageExtension.swift */,
 				CD30C927251474DD0049DB93 /* Assets.xcassets */,
+				F9CACF562842581800D6D71B /* Localizable.strings */,
 				CD30C94D25147B420049DB93 /* Videos */,
 				CD30C92C251474DD0049DB93 /* Info.plist */,
 				CD30C929251474DD0049DB93 /* Preview Content */,
@@ -200,6 +203,7 @@
 				CD30C94825147AEF0049DB93 /* squat.mp4 in Resources */,
 				CD30C94725147AEF0049DB93 /* burpee.mp4 in Resources */,
 				CD30C92B251474DD0049DB93 /* Preview Assets.xcassets in Resources */,
+				F9CACF542842581800D6D71B /* Localizable.strings in Resources */,
 				CD30C928251474DD0049DB93 /* Assets.xcassets in Resources */,
 				CD30C94925147AEF0049DB93 /* sun-salute.mp4 in Resources */,
 				CD30C94625147AEF0049DB93 /* step-up.mp4 in Resources */,
@@ -251,6 +255,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F9CACF562842581800D6D71B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9CACF552842581800D6D71B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CD30C92D251474DD0049DB93 /* Debug */ = {
