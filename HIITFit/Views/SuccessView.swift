@@ -36,13 +36,13 @@ struct SuccessView: View {
   var body: some View {
     ZStack {
       VStack {
-          Image(systemName: "hand.raised.fill")
-              .foregroundColor(Color.purple)
+        Image(systemName: "hand.raised.fill")
+          .foregroundColor(Color.purple)
           .font(.system(size: 75))
-          
-          Text("High Five!")
-              .font(.title)
-              .fontWeight(.bold)
+
+        Text("High Five!")
+          .font(.title)
+          .fontWeight(.bold)
         Text(
           "Good job completing all four exercises!\nRemember tomorrow's another day.\nSo eat well and get some rest."
         )
@@ -51,8 +51,8 @@ struct SuccessView: View {
       }
       VStack {
         Spacer()
-          Button("Continue") {}
-              .padding(.bottom)
+        Button("Continue") {}
+          .padding(.bottom)
       }
     }
   }
