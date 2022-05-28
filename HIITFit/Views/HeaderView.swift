@@ -33,31 +33,32 @@
 import SwiftUI
 
 struct HeaderView: View {
-    let exerciseName: String
+  let titleText: String
 
-    var body: some View {
-        VStack {
-            Text(exerciseName)
-                .font(.title)
-            HStack {
-                ForEach(0 ..< 4) { i in
-                    Image(systemName: "\(i + 1).circle")
-                }
-            }
-            .font(.title2)
+  var body: some View {
+    VStack {
+      Text(titleText)
+        .font(.title)
+      HStack {
+        Image(systemName: "hand.wave")
+        ForEach(0..<4) { i in
+          Image(systemName: "\(i + 1).circle")
         }
+      }
+      .font(.title2)
     }
+  }
 }
 
 struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            HeaderView(exerciseName: "Test")
-                .previewLayout(.sizeThatFits)
-            HeaderView(exerciseName: "Test")
-                .previewLayout(.sizeThatFits)
-                .preferredColorScheme(.dark)
-                .environment(\.sizeCategory, .accessibilityLarge)
-        }
+  static var previews: some View {
+    Group {
+      HeaderView(titleText: "Test")
+        .previewLayout(.sizeThatFits)
+      HeaderView(titleText: "Test")
+        .previewLayout(.sizeThatFits)
+        .preferredColorScheme(.dark)
+        .environment(\.sizeCategory, .accessibilityLarge)
     }
+  }
 }
