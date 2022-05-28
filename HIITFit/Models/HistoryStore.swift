@@ -47,17 +47,3 @@ struct HistoryStore {
     #endif
   }
 }
-
-extension HistoryStore {
-  mutating func seedData() {
-    // Seeds the store with development data
-    exerciseDays = [
-      ExerciseDay(
-        date: Date().addingTimeInterval(-86400),
-        exercises: Exercise.exercises.prefix(3).map(\.exerciseName)),
-      ExerciseDay(
-        date: Date().addingTimeInterval(-86400 * 2),
-        exercises: Exercise.exercises.prefix(2).map(\.exerciseName).reversed()),
-    ]
-  }
-}

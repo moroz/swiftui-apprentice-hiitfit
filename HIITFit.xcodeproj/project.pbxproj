@@ -25,6 +25,7 @@
 		F9CACF4A28424E9800D6D71B /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF4928424E9800D6D71B /* SuccessView.swift */; };
 		F9CACF4C284251BC00D6D71B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF4B284251BC00D6D71B /* Exercise.swift */; };
 		F9CACF4E284253A300D6D71B /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF4D284253A300D6D71B /* HistoryStore.swift */; };
+		F9CACF51284255D700D6D71B /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF50284255D700D6D71B /* HistoryStoreDevData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F9CACF4928424E9800D6D71B /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		F9CACF4B284251BC00D6D71B /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = HIITFit/Models/Exercise.swift; sourceTree = SOURCE_ROOT; };
 		F9CACF4D284253A300D6D71B /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryStore.swift; path = HIITFit/Models/HistoryStore.swift; sourceTree = SOURCE_ROOT; };
+		F9CACF50284255D700D6D71B /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				CD30C92A251474DD0049DB93 /* Preview Assets.xcassets */,
+				F9CACF50284255D700D6D71B /* HistoryStoreDevData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				F9CACF4A28424E9800D6D71B /* SuccessView.swift in Sources */,
 				CD30C926251474DC0049DB93 /* ContentView.swift in Sources */,
 				F9CACF4E284253A300D6D71B /* HistoryStore.swift in Sources */,
+				F9CACF51284255D700D6D71B /* HistoryStoreDevData.swift in Sources */,
 				F973C75F28415E0100492E1E /* RatingView.swift in Sources */,
 				CD30C93F25147A8C0049DB93 /* DateExtension.swift in Sources */,
 				F9CACF4C284251BC00D6D71B /* Exercise.swift in Sources */,
