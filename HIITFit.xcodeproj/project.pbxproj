@@ -21,6 +21,7 @@
 		CD30C94925147AEF0049DB93 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD30C94525147AEF0049DB93 /* sun-salute.mp4 */; };
 		F973C75D2841525C00492E1E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973C75C2841525C00492E1E /* HeaderView.swift */; };
 		F973C75F28415E0100492E1E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F973C75E28415E0100492E1E /* RatingView.swift */; };
+		F9CACF482841AFED00D6D71B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CACF472841AFED00D6D71B /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CD30C94525147AEF0049DB93 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
 		F973C75C2841525C00492E1E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		F973C75E28415E0100492E1E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		F9CACF472841AFED00D6D71B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F973C75C2841525C00492E1E /* HeaderView.swift */,
 				C7D1DBBB283FA07D00082279 /* WelcomeView.swift */,
 				C7D1DBBD283FA08700082279 /* ExerciseView.swift */,
+				F9CACF472841AFED00D6D71B /* HistoryView.swift */,
 				F973C75E28415E0100492E1E /* RatingView.swift */,
 			);
 			path = Views;
@@ -218,6 +221,7 @@
 				CD30C93F25147A8C0049DB93 /* DateExtension.swift in Sources */,
 				CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */,
 				CD30C94025147A8C0049DB93 /* ImageExtension.swift in Sources */,
+				F9CACF482841AFED00D6D71B /* HistoryView.swift in Sources */,
 				F973C75D2841525C00492E1E /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
