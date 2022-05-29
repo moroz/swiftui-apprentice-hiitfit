@@ -33,6 +33,8 @@
 import SwiftUI
 
 struct SuccessView: View {
+  @Environment(\.presentationMode) var presentationMode
+
   var body: some View {
     ZStack {
       VStack {
@@ -51,8 +53,10 @@ struct SuccessView: View {
       }
       VStack {
         Spacer()
-        Button("Continue") {}
-          .padding(.bottom)
+        Button("Continue") {
+          presentationMode.wrappedValue.dismiss()
+        }
+        .padding(.bottom)
       }
     }
   }
