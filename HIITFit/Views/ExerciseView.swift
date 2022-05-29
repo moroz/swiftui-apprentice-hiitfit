@@ -69,7 +69,7 @@ struct ExerciseView: View {
             }
           }
           .sheet(isPresented: $showSuccess) {
-            SuccessView()
+            SuccessView(selectedTab: $selectedTab)
           }
 
         }
