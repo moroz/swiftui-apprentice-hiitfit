@@ -56,7 +56,7 @@ struct ExerciseView: View {
           .padding()
         RatingView().padding()
         Spacer()
-        Button("History") {}.padding(.bottom)
+        Button(NSLocalizedString("History", comment: "view user activity")) {}.padding(.bottom)
       }
     }
   }
