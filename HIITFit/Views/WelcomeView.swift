@@ -38,7 +38,7 @@ struct WelcomeView: View {
   var body: some View {
     ZStack {
       VStack {
-        HeaderView(titleText: "Welcome")
+        HeaderView(selectedTab: $selectedTab, titleText: "Welcome")
         Spacer()
         Button("History") {}
           .padding(.bottom)
@@ -58,7 +58,7 @@ struct WelcomeView: View {
             .clipShape(Circle())
         }
         .padding(.bottom)
-        Button(action: {}) {
+        Button(action: { selectedTab = 0 }) {
           Text("Get Started")
           Image(systemName: "arrow.right.circle")
         }

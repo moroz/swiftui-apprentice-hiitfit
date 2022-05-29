@@ -38,10 +38,14 @@ struct ExerciseView: View {
   let interval: TimeInterval = 30
   @Binding var selectedTab: Int
 
+  var lastExercise: Bool {
+    index + 1 == Exercise.exercises.count
+  }
+
   var body: some View {
     GeometryReader { geometry in
       VStack {
-        HeaderView(titleText: Exercise.exercises[index].exerciseName)
+        HeaderView(selectedTab: $selectedTab, titleText: Exercise.exercises[index].exerciseName)
           .padding(.bottom)
         if let url = Exercise.exercises[index].videoUrl {
           VideoPlayer(player: AVPlayer(url: url))
@@ -52,9 +56,15 @@ struct ExerciseView: View {
         }
         Text(Date().addingTimeInterval(interval), style: .timer)
           .font(.system(size: 90))
-        Button("Start/Done") {}
-          .font(.title3)
-          .padding()
+        HStack(spacing: 150) {
+          Button("Start Exercise") {}
+          Button("Done") {
+            selectedTab = lastExercise ? 9 : selectedTab + 1
+          }
+
+        }
+        .font(.title3)
+        .padding()
         RatingView().padding()
         Spacer()
         Button("History") {}.padding(.bottom)
