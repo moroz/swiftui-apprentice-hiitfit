@@ -37,6 +37,7 @@ struct ExerciseView: View {
   let index: Int
   let interval: TimeInterval = 30
   @Binding var selectedTab: Int
+  @State private var rating = 0
 
   var lastExercise: Bool {
     index + 1 == Exercise.exercises.count
@@ -65,7 +66,7 @@ struct ExerciseView: View {
         }
         .font(.title3)
         .padding()
-        RatingView().padding()
+        RatingView(rating: $rating).padding()
         Spacer()
         Button("History") {}.padding(.bottom)
       }
