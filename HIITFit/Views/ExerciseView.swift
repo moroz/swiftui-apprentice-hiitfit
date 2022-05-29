@@ -36,6 +36,7 @@ import SwiftUI
 struct ExerciseView: View {
   let index: Int
   let interval: TimeInterval = 30
+  @Binding var selectedTab: Int
 
   var body: some View {
     GeometryReader { geometry in
@@ -64,6 +65,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
   static var previews: some View {
-    ExerciseView(index: 0)
+    ExerciseView(index: 1, selectedTab: .constant(1))
   }
 }
