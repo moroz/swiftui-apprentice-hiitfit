@@ -81,7 +81,7 @@ struct ExerciseView: View {
           showHistory.toggle()
         }
         .sheet(isPresented: $showHistory) {
-          HistoryView(showHistory: $showHistory)
+          HistoryView()
         }
         .padding(.bottom)
       }
