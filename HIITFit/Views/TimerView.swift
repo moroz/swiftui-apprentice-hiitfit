@@ -30,74 +30,32 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import AVKit
 import SwiftUI
 
-struct ExerciseView: View {
-  let index: Int
-  @State private var timerDone = false
-  @State private var showTimer = false
-  @Binding var selectedTab: Int
-  @State private var rating = 0
-  @State private var showHistory = false
-  @State private var showSuccess = false
+struct TimerView: View {
+  @State private var timeRemaining = 3
+  @Binding var timerDone: Bool
 
-  var lastExercise: Bool {
-    index + 1 == Exercise.exercises.count
-  }
+  let timer = Timer.publish(every: 1, on: .main, in: .common)
+    .autoconnect()
 
   var body: some View {
-    GeometryReader { geometry in
-      VStack {
-        HeaderView(selectedTab: $selectedTab, titleText: Exercise.exercises[index].exerciseName)
-          .padding(.bottom)
-        if let url = Exercise.exercises[index].videoUrl {
-          VideoPlayer(player: AVPlayer(url: url))
-            .frame(height: geometry.size.height * 0.45)
+    Text("\(timeRemaining)")
+      .font(.system(size: 90, design: .rounded))
+      .padding()
+      .onReceive(timer) { _ in
+        if self.timeRemaining > 0 {
+          self.timeRemaining -= 1
         } else {
-          Text("Could not find \(Exercise.exercises[index].videoName).mp4")
-            .foregroundColor(.red)
+          timerDone = true
         }
-        if showTimer {
-          TimerView(timerDone: $timerDone)
-        }
-        HStack(spacing: 150) {
-          Button("Start Exercise") {
-            showTimer.toggle()
-          }
-          Button("Done") {
-            timerDone = false
-            showTimer.toggle()
-            if lastExercise {
-              showSuccess.toggle()
-            } else {
-              selectedTab += 1
-            }
-          }
-          .disabled(!timerDone)
-          .sheet(isPresented: $showSuccess) {
-            SuccessView(selectedTab: $selectedTab)
-          }
-
-        }
-        .font(.title3)
-        .padding()
-        RatingView(rating: $rating).padding()
-        Spacer()
-        Button("History") {
-          showHistory.toggle()
-        }
-        .sheet(isPresented: $showHistory) {
-          HistoryView()
-        }
-        .padding(.bottom)
       }
-    }
   }
 }
 
-struct ExerciseView_Previews: PreviewProvider {
+struct TimerView_Previews: PreviewProvider {
   static var previews: some View {
-    ExerciseView(index: 3, selectedTab: .constant(3))
+    TimerView(timerDone: .constant(false))
+      .previewLayout(.sizeThatFits)
   }
 }
