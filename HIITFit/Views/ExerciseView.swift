@@ -40,7 +40,6 @@ struct ExerciseView: View {
   @State private var timerDone = false
   @State private var showTimer = false
   @Binding var selectedTab: Int
-  @State private var rating = 0
   @State private var showHistory = false
   @State private var showSuccess = false
 
@@ -87,7 +86,7 @@ struct ExerciseView: View {
         }
 
         Spacer()
-        RatingView(rating: $rating)
+        RatingView(exerciseIndex: index)
           .padding()
         Button("History") {
           showHistory.toggle()
