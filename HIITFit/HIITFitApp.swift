@@ -38,14 +38,7 @@ struct HIITFitApp: App {
   @State private var showAlert = false
 
   init() {
-    let historyStore: HistoryStore
-    do {
-      historyStore = try HistoryStore(withChecking: true)
-    } catch {
-      print("Could not load history data")
-      historyStore = HistoryStore()
-      showAlert = true
-    }
+    let historyStore = HistoryStore()
     _historyStore = StateObject(wrappedValue: historyStore)
   }
 
