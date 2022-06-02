@@ -38,8 +38,28 @@ struct ExerciseDay: Identifiable {
   var exercises: [String] = []
 }
 
+enum FileError: Error {
+  case loadFailure
+  case saveFailure
+  case urlFailure
+}
+
 class HistoryStore: ObservableObject {
   @Published var exerciseDays: [ExerciseDay] = []
+
+  init(withChecking: Bool) throws {
+    do {
+      try load()
+    } catch {
+      throw error
+    }
+  }
+  
+  init() {}
+  
+  func load() throws {
+    throw FileError.loadFailure
+  }
 
   func addDoneExercise(_ exerciseName: String) {
     let today = Date()
