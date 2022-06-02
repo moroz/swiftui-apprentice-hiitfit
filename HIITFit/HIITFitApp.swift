@@ -37,6 +37,7 @@ struct HIITFitApp: App {
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environmentObject(HistoryStore())
     }
   }
 }
